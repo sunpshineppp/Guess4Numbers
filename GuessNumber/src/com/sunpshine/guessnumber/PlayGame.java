@@ -36,7 +36,8 @@ public class PlayGame extends Activity implements OnClickListener,
 	Button buGuess;
 
 	TextView guessHistory;
-	String guessHistoryList;
+	String guessing="";
+	String guessHistoryList="";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -212,9 +213,11 @@ public class PlayGame extends Activity implements OnClickListener,
 	private void printHistory(String RA, String RB) {
 		// TODO Auto-generated method stub
 		
-		guessHistoryList = 
+		guessing = 
 				'\n' 
 				+ nunber1 + nunber2 + nunber3 + nunber4 + " is " + RA + " A " + RB + " B.";
+		
+		guessHistoryList = guessHistoryList + guessing;
 
 		guessHistory.setText(
 				"You had made your guessing... "
