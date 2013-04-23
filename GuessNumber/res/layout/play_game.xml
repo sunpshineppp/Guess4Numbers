@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Plz choose 4 numbers, 1~9, no repeat." />
+        android:text="Plz choose 4 numbers, 0~9, no repeat." />
 
     <LinearLayout
         android:weightSum="4"

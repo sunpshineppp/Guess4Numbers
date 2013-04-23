@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.NumberPicker.OnValueChangeListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PlayGame extends Activity implements OnClickListener,
 		OnValueChangeListener {
@@ -51,10 +52,20 @@ public class PlayGame extends Activity implements OnClickListener,
 		numberPicker3.setMaxValue(9);
 		numberPicker4.setMaxValue(9);
 
-		numberPicker1.setMinValue(1);
-		numberPicker2.setMinValue(1);
-		numberPicker3.setMinValue(1);
-		numberPicker4.setMinValue(1);
+		numberPicker1.setMinValue(0);
+		numberPicker2.setMinValue(0);
+		numberPicker3.setMinValue(0);
+		numberPicker4.setMinValue(0);
+		
+		numberPicker1.setValue(0);
+		numberPicker2.setValue(0);
+		numberPicker3.setValue(0);
+		numberPicker4.setValue(0);
+		
+		nunber1 = "0";
+		nunber2 = "0";
+		nunber3 = "0";
+		nunber4 = "0";
 
 		numberPicker1.setOnValueChangedListener(this);
 		numberPicker2.setOnValueChangedListener(this);
@@ -76,9 +87,24 @@ public class PlayGame extends Activity implements OnClickListener,
 
 		case R.id.buGuess:
 
-			guessHistory.setText("You had made your guessing... " + nunber1
-					+ nunber2 + nunber3 + nunber4);
+			
+			if(nunber1 != nunber2 
+			&& nunber1 != nunber3
+			&& nunber1 != nunber4
+			&& nunber2 != nunber3
+			&& nunber2 != nunber4
+			&& nunber3 != nunber4){
+			
+			guessHistoryList = '\n' + nunber1 + nunber2 + nunber3 + nunber4;
 
+			guessHistory.setText("You had made your guessing... " + '\n'
+					+ guessHistoryList);
+
+			}else{
+				
+				Toast.makeText(v.getContext(), "4 numbers must be all different", Toast.LENGTH_LONG).show();
+			}
+			
 			break;
 
 		}
@@ -95,11 +121,15 @@ public class PlayGame extends Activity implements OnClickListener,
 
 			nunber1 = Integer.toString(newVal);
 
+			
+
 			break;
 
 		case R.id.numberPicker2:
 
 			nunber2 = Integer.toString(newVal);
+
+			
 
 			break;
 
@@ -107,11 +137,15 @@ public class PlayGame extends Activity implements OnClickListener,
 
 			nunber3 = Integer.toString(newVal);
 
+			
+
 			break;
 
 		case R.id.numberPicker4:
 
 			nunber4 = Integer.toString(newVal);
+
+			
 
 			break;
 
