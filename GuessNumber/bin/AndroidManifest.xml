@@ -36,6 +36,17 @@
             </intent-filter>
         </activity>
         
+        <activity
+            android:name="com.sunpshine.guessnumber.GameOver"
+            android:label="Game Over"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sunpshine.guessnumber.GameOver" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
         
         
     </application>

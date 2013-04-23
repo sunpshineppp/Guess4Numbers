@@ -25,14 +25,15 @@ public final class R {
         public static final int opening_background=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090007;
-        public static final int buGuess=0x7f090004;
-        public static final int guessHistory=0x7f090006;
-        public static final int historyView=0x7f090005;
-        public static final int numberPicker1=0x7f090000;
-        public static final int numberPicker2=0x7f090001;
-        public static final int numberPicker3=0x7f090002;
-        public static final int numberPicker4=0x7f090003;
+        public static final int action_settings=0x7f090008;
+        public static final int buAgain=0x7f090000;
+        public static final int buGuess=0x7f090005;
+        public static final int guessHistory=0x7f090007;
+        public static final int historyView=0x7f090006;
+        public static final int numberPicker1=0x7f090001;
+        public static final int numberPicker2=0x7f090002;
+        public static final int numberPicker3=0x7f090003;
+        public static final int numberPicker4=0x7f090004;
     }
     public static final class layout {
         public static final int game_over=0x7f030000;

@@ -3,6 +3,7 @@ package com.sunpshine.guessnumber;
 import java.util.Random;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -69,12 +70,12 @@ public class PlayGame extends Activity implements OnClickListener,
 		answer3 = Integer.toString(rrr3);
 		answer4 = Integer.toString(rrr4);
 		
-		if (nunber1 != nunber2 && 
-				nunber1 != nunber3 && 
-				nunber1 != nunber4 && 
-				nunber2 != nunber3 && 
-				nunber2 != nunber4 && 
-				nunber3 != nunber4) {
+		if (answer1 != answer2 && 
+			answer1 != answer3 && 
+			answer1 != answer4 && 
+			answer2 != answer3 && 
+			answer2 != answer4 && 
+			answer3 != answer4) {
 
 					break;
 					
@@ -201,7 +202,11 @@ public class PlayGame extends Activity implements OnClickListener,
 		resultB = Integer.toString(br);
 		
 		if (ar==4){
-			Toast.makeText(this, "You Got It All Right !!!", Toast.LENGTH_LONG).show();
+			
+			Intent over = new Intent(PlayGame.this, GameOver.class);			
+			startActivity(over);
+			
+			
 		} else {
 			
 			printHistory(resultA,resultB);
