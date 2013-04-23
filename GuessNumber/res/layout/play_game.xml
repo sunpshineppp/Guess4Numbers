@@ -10,28 +10,33 @@
         android:text="Plz choose 4 numbers, 1~9, no repeat." />
 
     <LinearLayout
+        android:weightSum="4"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
         <NumberPicker
             android:id="@+id/numberPicker1"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
 
         <NumberPicker
             android:id="@+id/numberPicker2"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
 
         <NumberPicker
             android:id="@+id/numberPicker3"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
 
         <NumberPicker
             android:id="@+id/numberPicker4"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
