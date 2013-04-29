@@ -55,31 +55,36 @@ public class PlayGame extends Activity implements OnClickListener,
 		// TODO Auto-generated method stub
 		
 		
-		while(answer1 == null || answer2 == null || answer3 == null || answer4 == null){
+		while(answer1 == null || answer2 == null || answer3 == null || answer4 == null ||
+				answer1 == answer2 || 
+				answer1 == answer3 || 
+				answer1 == answer4 || 
+				answer2 == answer1 ||
+				answer2 == answer3 || 
+				answer2 == answer4 || 
+				answer3 == answer1 ||
+				answer3 == answer2 ||
+				answer3 == answer4 ||
+				answer4 == answer1 ||
+				answer4 == answer2 ||
+				answer4 == answer3
+				
+				){
 		
-		final Random rr1 = new Random();
-		int rrr1 = rr1.nextInt(9);
-		final Random rr2 = new Random();
-		int rrr2 = rr2.nextInt(9);		
-		final Random rr3 = new Random();
-		int rrr3 = rr3.nextInt(9);
-		final Random rr4 = new Random();
-		int rrr4 = rr4.nextInt(9);
-		answer1 = Integer.toString(rrr1);
-		answer2 = Integer.toString(rrr2);
-		answer3 = Integer.toString(rrr3);
-		answer4 = Integer.toString(rrr4);
+			final Random rr1 = new Random();
+			int rrr1 = rr1.nextInt(9);
+			final Random rr2 = new Random();
+			int rrr2 = rr2.nextInt(9);		
+			final Random rr3 = new Random();
+			int rrr3 = rr3.nextInt(9);
+			final Random rr4 = new Random();
+			int rrr4 = rr4.nextInt(9);
+			answer1 = Integer.toString(rrr1);
+			answer2 = Integer.toString(rrr2);
+			answer3 = Integer.toString(rrr3);
+			answer4 = Integer.toString(rrr4);
 		
-		if (answer1 != answer2 && 
-			answer1 != answer3 && 
-			answer1 != answer4 && 
-			answer2 != answer3 && 
-			answer2 != answer4 && 
-			answer3 != answer4) {
-
-					break;
-					
-			}
+			
 
 		}
 		
@@ -219,6 +224,8 @@ public class PlayGame extends Activity implements OnClickListener,
 		// TODO Auto-generated method stub
 		
 		guessing = 
+				//test
+				answer1 + answer2 + answer3 + answer4 +
 				'\n' 
 				+ nunber1 + nunber2 + nunber3 + nunber4 + " is " + RA + " A " + RB + " B.";
 		
