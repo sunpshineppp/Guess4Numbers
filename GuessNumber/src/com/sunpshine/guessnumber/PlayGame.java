@@ -225,7 +225,7 @@ public class PlayGame extends Activity implements OnClickListener,
 		
 		guessing = 
 				//test
-				answer1 + answer2 + answer3 + answer4 +
+				//answer1 + answer2 + answer3 + answer4 +
 				'\n' 
 				+ nunber1 + nunber2 + nunber3 + nunber4 + " is " + RA + " A " + RB + " B.";
 		
